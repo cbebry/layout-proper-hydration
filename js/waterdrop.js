@@ -15,25 +15,18 @@ var waterdrop_update = function(canvas, context) {
 	var w = canvas[0].width;
 	var h = canvas[0].height;
 	
-	// var sw = w;
-	// var sh = h - (show_percent * h / 100);
-	// var sx = h - sh;
-	// var sy = 0;
+	var img_w = waterdrop_fill.width;
+	var img_h = waterdrop_fill.height;
 	
-	// var dw = sw;
-	// var dh = sh;
-	// var dx = 0;
-	// var dy = 0;
-	
-	var sw = w;
-	var sh = h - ((100-show_percent) * h / 100);
+	var sw = img_w;
+	var sh = img_h - ((100-show_percent) * img_h / 100);
 	var sx = 0;
-	var sy = h - sh;
+	var sy = img_h - sh;
 	
-	var dw = sw;
-	var dh = sh;
-	var dx = sx;
-	var dy = sy;
+	var dw = w;
+	var dh = h - ((100-show_percent) * h / 100);
+	var dx = 0;
+	var dy = h - dh;
 	
 	
 	context.drawImage(waterdrop_outline, 0, 0, w, h);
