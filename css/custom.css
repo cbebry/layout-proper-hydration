@@ -2,9 +2,13 @@
 	margin-top: 144px;
 }
 #output-panel{
-	margin-top: 27px;
+	margin-top: 26px;
+	min-height: 273px;
 }
- #canvas-container {
+#canvas-container {
 	max-height: 180px;
 	max-width: 180px;
- }
+}
+.info-container {
+	min-height:280px;
+}

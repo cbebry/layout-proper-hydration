@@ -36,7 +36,7 @@ var waterdrop_update = function(canvas, context) {
 	var dy = sy;
 	
 	
-	//context.drawImage(waterdrop_outline, 0, 0, w, h);
+	context.drawImage(waterdrop_outline, 0, 0, w, h);
 	context.drawImage(waterdrop_fill, sx, sy, sw, sh, dx, dy, dw, dh);
 	//console.log(canvas[0].width);
 	//console.log(canvas[0].height);
