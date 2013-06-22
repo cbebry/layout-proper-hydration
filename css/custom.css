@@ -1,0 +1,10 @@
+#mainContent { 
+	margin-top: 144px;
+}
+#output-panel{
+	margin-top: 27px;
+}
+ #canvas-container {
+	max-height: 180px;
+	max-width: 180px;
+ }
