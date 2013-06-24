@@ -2,14 +2,12 @@ var waterdrop_outline = new Image();
 waterdrop_outline.src = 'images/waterdrop.png';
 var waterdrop_fill = new Image();
 waterdrop_fill.src = 'images/waterdrop-fill.png';
+var waterdrop_percent = 0;
 
-var updatePercent = function(glasses) {
-	//TODO
-}
 
 var waterdrop_init = function(canvas, context) {
 	waterdrop_outline.onload = function() {
-		waterdrop_update(canvas, context);
+		waterdrop_update(canvas, context, waterdrop_percent);
 	}
 	$('#volume').blur(function(e) {
 		var volume = $('#volume').val();
@@ -21,10 +19,14 @@ var waterdrop_init = function(canvas, context) {
 		var volume = glasses * 8;
 		$('#volume').val(volume);
 	});
+	
+	var updatePercent = function(glasses) {
+	//TODO
+	}
 }
-var waterdrop_update = function(canvas, context) {
+var waterdrop_update = function(canvas, context, percent) {
 	//must be between 0 and 100
-	var show_percent = 50; //TODO: based on input
+	var show_percent = percent;
 	
 	var w = canvas[0].width;
 	var h = canvas[0].height;
